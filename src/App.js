@@ -4,7 +4,6 @@ import WeatherToday from "./WeatherToday";
 import { useState } from "react";
 import DateTime from "./functions/DateTime";
 
-
 function App() {
   const [weatherData, setWeatherData] = useState(null);
   const [error, setError] = useState(false);
@@ -17,7 +16,7 @@ function App() {
     }
     setWeatherData({
       city: response.data.city,
-      date:DateTime(),
+      date: DateTime(),
       hum: response.data.temperature.humidity,
       windSpeed: Math.round(response.data.wind.speed),
       icon: response.data.condition.icon_url,
@@ -41,8 +40,8 @@ function App() {
     let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
     axios.get(url).then(handleSubmit);
   }
-  function getGeolocation(){
-     navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  function getGeolocation() {
+    navigator.geolocation.getCurrentPosition(getCurrentLocation);
   }
 
   return (
@@ -56,11 +55,7 @@ function App() {
             placeholder="Enter your city..."
           />
           <div className="buttons">
-            <button
-              className="btn btn-primary submit-city 
-          "
-              type="submit"
-            >
+            <button className="btn btn-primary submit-city" type="submit">
               SEARCH
             </button>
             <button
