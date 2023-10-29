@@ -26,6 +26,9 @@
 .col-7 {
   margin-top: -6px;
 }
+#description{
+  text-transform: capitalize;
+}
 
 @media (max-width: 550px) {
   .temperature-container {
