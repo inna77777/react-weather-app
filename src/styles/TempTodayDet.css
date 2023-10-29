@@ -1,0 +1,23 @@
+.temperature-container {
+  font-size: 40px;
+  margin-right: 20px;
+  margin-top: 20px;
+}
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 24px;
+}
+
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  text-decoration: underline;
+}
+.feels-like {
+  font-size: 15px;
+}
+
+#img-today {
+  margin-top: -50px;
+}

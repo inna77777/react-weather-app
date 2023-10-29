@@ -1,0 +1,41 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  position: relative;
+  margin: 0;
+  padding: 30px 0 0 0;
+  min-height: 100vh;
+
+  background: linear-gradient(
+    359.3deg,
+    rgb(196, 214, 252) 1%,
+    rgba(187, 187, 187, 0) 70.9%
+  );
+  background-repeat: no-repeat;
+  background-position: center;
+  font-family: "Ruwudu", serif;
+  overflow: hidden;
+  color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  body {
+    background-position: center top;
+  }
+}
+ul {
+  padding-left: 0;
+  margin-left: 0;
+}
+
+li {
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+  list-style: none;
+  margin-bottom: 5px;
+}
