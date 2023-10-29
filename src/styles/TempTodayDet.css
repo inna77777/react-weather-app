@@ -1,13 +1,15 @@
 .temperature-container {
   font-size: 40px;
-  margin-right: 20px;
-  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+   padding-right: 10px;
 }
 #celsius-link,
 #fahrenheit-link {
   text-decoration: none;
   color: #ffffff;
-  font-size: 24px;
+  font-size: 20px;
 }
 
 #celsius-link:hover,
@@ -20,4 +22,21 @@
 
 #img-today {
   margin-top: -50px;
+}
+.col-7 {
+  margin-top: -6px;
+}
+
+@media (max-width: 550px) {
+  .temperature-container {
+    width: 100%;
+    justify-content: flex-end;
+   
+  }
+  #img-today {
+    width: 70px;
+  }
+  #temperature-today{
+    font-size: 26px;
+  }
 }

@@ -35,24 +35,39 @@ function App() {
     axios.get(url).then(handleSubmit);
   }
 
+  function getCurrentLocation(position) {
+    const apiKey = "7928b8fafat7344abbe4f90d8711dbbo";
+    const { latitude: lat, longitude: lon } = position.coords;
+    let url = `https://api.shecodes.io/weather/v1/current?lon=${lon}&lat=${lat}&key=${apiKey}`;
+    axios.get(url).then(handleSubmit);
+  }
+  function getGeolocation(){
+     navigator.geolocation.getCurrentPosition(getCurrentLocation);
+  }
+
   return (
     <div className="WeatherApp">
       <section className="city-weather">
-        <form onSubmit={getCity}>
-          <div className="search-line-button">
-            <input
-              type="search"
-              name="enter-city"
-              id="search-city"
-              placeholder="Enter your city"
-            />
-            <button className="btn btn-primary submit-city" type="submit">
+        <form className="form-search mb-4" onSubmit={getCity}>
+          <input
+            type="search"
+            name="enter-city"
+            id="search-city"
+            placeholder="Enter your city..."
+          />
+          <div className="buttons">
+            <button
+              className="btn btn-primary submit-city 
+          "
+              type="submit"
+            >
               SEARCH
             </button>
             <button
               id="current-location"
               className="btn btn-primary"
               type="button"
+              onClick={getGeolocation}
             >
               CURRENT
             </button>
@@ -63,8 +78,8 @@ function App() {
       <p id="gitLink">
         <a href="https://github.com/inna77777/project-shecodesplus">
           Open-source code
-        </a> 
-         {" "}by Inna Kobets
+        </a>{" "}
+        by Inna Kobets
       </p>
     </div>
   );

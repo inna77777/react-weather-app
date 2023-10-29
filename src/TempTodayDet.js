@@ -1,17 +1,11 @@
 import React from "react";
 import "./styles/TempTodayDet.css";
 
-export default function TempTodayDet({temp,icon,desc, feelsLike}){
+export default function TempTodayDet({ temp, icon, desc, feelsLike }) {
   return (
-    <div className="temperature-container d-flex align-items-center justify-content-end">
-      <span>
-        <img
-          id="img-today"
-          src={icon}
-          alt="icon-weather"
-        />
-      </span>
-      <div className="col-6">
+    <div className="temperature-container">
+      <img id="img-today" src={icon} alt="icon-weather" />
+      <div>
         <span id="temperature-today">{temp} </span>
         <span className="units">
           <a href="/" id="celsius-link">
@@ -19,7 +13,7 @@ export default function TempTodayDet({temp,icon,desc, feelsLike}){
           </a>
           <a href="/" id="fahrenheit-link">
             {" "}
-             °F
+            °F
           </a>
         </span>
         <div className="feels-like">

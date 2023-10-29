@@ -11,3 +11,19 @@
   display: flex;
   justify-content: center;
 }
+
+@media (max-width: 550px) {
+  .city-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 10px;
+
+  }
+  .temp-container {
+    width: 100%;
+     padding: 0 !important;
+  
+  }
+
+}

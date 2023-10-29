@@ -14,27 +14,23 @@ export default function WeatherToday({ weatherData, error }) {
   }
   if (weatherData?.city) {
     return (
-      <div className="general-city">
-        <div className="city-date">
-          <div className="WeatherInfo">
-            <div className="row">
-              <div className="col-6">
-                <CityDet
-                  city={weatherData.city}
-                  date={weatherData.date}
-                  hum={weatherData.hum}
-                  windSpeed={weatherData.windSpeed}
-                />
-              </div>
-              <div className="col-lg-6 col-md-6 col-sm-8">
-                <TempTodayDet
-                  icon={weatherData.icon}
-                  temp={weatherData.temp}
-                  desc={weatherData.desc}
-                  feelsLike={weatherData.feelsLike}
-                />
-              </div>
-            </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-5 city-container">
+            <CityDet
+              city={weatherData.city}
+              date={weatherData.date}
+              hum={weatherData.hum}
+              windSpeed={weatherData.windSpeed}
+            />
+          </div>
+          <div className="col-7 pe-0 pt-3 temp-container">
+            <TempTodayDet
+              icon={weatherData.icon}
+              temp={weatherData.temp}
+              desc={weatherData.desc}
+              feelsLike={weatherData.feelsLike}
+            />
           </div>
         </div>
       </div>
