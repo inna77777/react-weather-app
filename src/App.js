@@ -14,6 +14,7 @@ function App() {
       setError(response.data.message);
       return;
     }
+    console.log(response.data);
     setWeatherData({
       city: response.data.city,
       date: DateTime(),

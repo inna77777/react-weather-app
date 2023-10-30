@@ -1,0 +1,15 @@
+#celsius-link,
+#fahrenheit-link {
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 20px;
+}
+
+#celsius-link:hover,
+#fahrenheit-link:hover {
+  text-decoration: underline;
+}
+.units {
+  color: black;
+  font-size: 20px;
+}
