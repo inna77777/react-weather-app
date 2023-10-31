@@ -1,0 +1,31 @@
+#days6 {
+  padding: 0px;
+  margin-top: 30px;
+}
+.day {
+  font-size: 23px;
+  font-weight: bolder;
+}
+
+.temperature-max,
+.temperature-min,
+.emoji {
+  word-spacing: 5px;
+  font-size: 15px;
+}
+
+.temperature-min {
+  opacity: 0.7;
+}
+.one-day {
+  text-align: center;
+  padding: 20px 0;
+  margin: 10px 5px;
+  transition: all 200ms ease-in-out;
+  border-radius: 30px;
+  max-width: 120px;
+}
+.one-day:hover {
+  box-shadow: 0 0 10px rgba(255, 255, 255, 1);
+  cursor: pointer;
+}

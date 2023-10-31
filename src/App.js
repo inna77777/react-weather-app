@@ -3,6 +3,7 @@ import axios from "axios";
 import WeatherToday from "./WeatherToday";
 import { useState } from "react";
 import DateTime from "./functions/DateTime";
+import Forecast from "./forecast/Forecast";
 
 function App() {
   const [weatherData, setWeatherData] = useState(null);
@@ -70,6 +71,7 @@ function App() {
           </div>
         </form>
         <WeatherToday weatherData={weatherData} error={error} />
+        <Forecast city={weatherData?.city}/>
       </section>
       <p id="gitLink">
         <a href="https://github.com/inna77777/project-shecodesplus">
