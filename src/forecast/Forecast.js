@@ -31,7 +31,7 @@ export default function Forecast({ city }) {
           return (
             <div className="col one-day">
               <div className="day">{day}</div>
-              <img className="icons-forecast" src={icon} />
+              <img className="icons-forecast" src={icon} alt="icons" />
               <div className="temperature-max">
                 {tempMax}°C
                 <div className="temperature-min">{tempMin}°C</div>
